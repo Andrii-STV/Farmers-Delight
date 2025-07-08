@@ -1,0 +1,159 @@
+    @font-face {
+        font-family: "Minecraft";
+        src: url('/assets/fonts/Minecraft\ Font/MinecraftRegular-Bmg3.otf');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+:root {
+    --red: #ff0000;
+    --dark-red: #A30703;
+    --white: #fff;
+    --black: #000;
+    --light-gray: #999999;
+    --dark-gray: #5A5A5A;
+}
+
+*, *::after, *::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.main {
+    height: 100vh;
+    background: url('/assets/imgs/index-bg.png') rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+    overflow: hidden;
+    background-blend-mode: overlay;
+    background-position: center center;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+h1 {
+    font-family: "Minecraft";
+    font-size: 64px;
+    font-weight: normal;
+    color: var(--white);
+    align-self: flex-start;
+}
+
+.bottom-ui {
+    width: 955px;
+    display: flex;
+    flex-direction: column;
+}
+
+.heart-bar {
+    display: flex;
+    align-self: flex-start;
+}
+
+.pixel-heart {
+    margin: 12px 12px;
+    position: relative;
+    width: 10px;
+    height: 10px;
+    transform: scale(0.3);
+    background-color: var(--red);
+    box-shadow: 
+        -10px 0px var(--red),
+        -20px 0px var(--dark-red),
+        -30px 0px var(--black),
+        10px 0px var(--red),
+        20px 0px var(--red),
+        30px 0px var(--black),
+        0px 10px var(--red),
+        -10px 10px var(--dark-red),
+        -20px 10px var(--black),
+        10px 10px var(--red),
+        20px 10px var(--black),
+        0px 20px var(--dark-red),
+        -10px 20px var(--black),
+        10px 20px var(--black),
+        0px 30px var(--black),
+        0px -10px var(--red),
+        -10px -10px var(--red),
+        -20px -10px var(--red),
+        -30px -10px var(--dark-red),
+        -40px -10px var(--black),
+        10px -10px var(--red),
+        20px -10px var(--red),
+        30px -10px var(--red),
+        40px -10px var(--black),
+        0px -20px var(--red),
+        -10px -20px var(--red),
+        -20px -20px var(--red),
+        -30px -20px var(--dark-red),
+        -40px -20px var(--dark-red),
+        -50px -20px var(--black),
+        10px -20px var(--red),
+        20px -20px var(--white),
+        30px -20px var(--red),
+        40px -20px var(--red),
+        50px -20px var(--black),
+        0px -30px var(--black),
+        -10px -30px var(--red),
+        -20px -30px var(--red),
+        -30px -30px var(--red),
+        -40px -30px var(--dark-red),
+        -50px -30px var(--black),
+        10px -30px var(--red),
+        20px -30px var(--red),
+        30px -30px var(--white),
+        40px -30px var(--red),
+        50px -30px var(--black),
+        -10px -40px var(--black),
+        -20px -40px var(--red),
+        -30px -40px var(--dark-red),
+        -40px -40px var(--black),
+        10px -40px var(--black),
+        20px -40px var(--red),
+        30px -40px var(--red),
+        40px -40px var(--black),
+        -20px -50px var(--black),
+        -30px -50px var(--black),
+        20px -50px var(--black),
+        30px -50px var(--black); 
+    
+}
+
+
+.tool-slots {
+    width: 955px;
+    height: 115px;
+    border: 5px var(--black) solid;
+    display: flex;
+    gap: 5px;
+}
+
+.tool-slot {
+    flex-shrink: 0;
+    height: 100px;
+    width: 100px;
+    border: var(--light-gray) 5px solid;
+    background:rgba(0, 0, 0, 0.2);
+    box-shadow: 5px 5px var(--dark-gray) inset, 5px 5px var(--dark-gray), 5px 0px var(--dark-gray), 0px 5px var(--dark-gray);
+    position: relative;
+    
+}
+
+.tool-slot:after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top:5px;
+    left:5px;
+    box-shadow: -5px -5px rgb(0, 0, 0, 0.8);
+}
+
+
+
+
