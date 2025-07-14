@@ -12,12 +12,14 @@
     --black: #000;
     --light-gray: #999999;
     --dark-gray: #5A5A5A;
+    --green: #004409;
 }
 
 *, *::after, *::before {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    color: var(--white)
 }
 
 
@@ -42,6 +44,28 @@ h1 {
     font-weight: normal;
     color: var(--white);
     align-self: flex-start;
+}
+
+#counter {
+    font-family: "Minecraft";
+    font-weight: normal;
+    color: var(--white);
+    align-self: flex-start;
+}
+
+#restart-btn {
+    background-color: var(--green);
+    padding: 20px 32px;
+    font-family: "Minecraft";
+    font-weight: 400;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    box-shadow: 5px 5px 22px rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    
 }
 
 .bottom-ui {
