@@ -1,25 +1,23 @@
-const hearts = document.querySelectorAll(".pixel-heart");let i = 9;
-var countDownDate = new Date().getTime();
-
+const hearts = document.querySelectorAll(".pixel-heart");let i = 0;
 
 
 function restartLife () {
-    location.reload();
+    //location.reload();
+    i = 0;
+
+
+    hearts.forEach(element => {
+            element.style.opacity = "1";
+    });
 
 }
 
 var x = setInterval(function() {
-
-    
-
-
-    var now = new Date().getTime();
-    document.getElementById("counter").innerHTML = now;
-    hearts[i].style.opacity = "0";
-    i--;
+    hearts[(9-i)].style.opacity = "0";
+    i++;
     
     
-}, 1000);
+}, 2000);
 
 
 
